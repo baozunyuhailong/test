@@ -8,6 +8,7 @@ import java.util.concurrent.Future;
 
 public class bubbleSort {
 	public static CountDownLatch countDownLatch;
+	
 	public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         countDownLatch = new CountDownLatch(2);
@@ -31,7 +32,7 @@ public class bubbleSort {
     		 this.countDownLatch = countDownLatch;
     		 this.aa = aa;
     	}
-        //ÐèÒªÊµÏÖCallableµÄCall·½·¨
+        //ï¿½ï¿½ÒªÊµï¿½ï¿½Callableï¿½ï¿½Callï¿½ï¿½ï¿½ï¿½
         public SingletonClass call() throws Exception {
         	Thread.sleep(aa);
         	countDownLatch.countDown();
